@@ -33,6 +33,7 @@
     <div class="floatLeft">This Many Following</div>
     <div class="floatLeft">This Many Tweets</div>
   </div>
+  <br>
   <hr></hr>
   <div id="tweets">Tweets go here.</div>
 </body>
