@@ -24,10 +24,10 @@ CREATE TABLE IF NOT EXISTS tweets(
   quote int(11),
   likes int(11),
   ad enum('Y', 'N'),
-  time datetime,
+  time datetime DEFAULT CURRENT_TIMESTAMP,
   rt_of int(11),
   reply_to int(11),
-  user int(11),
+  user int(11) NOT NULL,
   clicks int(11),
   PRIMARY KEY (id),
   FOREIGN KEY (quote) REFERENCES tweets(id),
@@ -73,3 +73,11 @@ CREATE TABLE IF NOT EXISTS ads(
   ppc decimal(8, 2) NOT NULL,
   PRIMARY KEY (id)
 );
+
+INSERT INTO users (username, password, email, fname, lname, verified) VALUES ('@first-user', '1234567', 'johndoe@gmail.com', 'John', 'Doe', 'Y'), ('@imsecond', '$econdacc', 'noname@gmail.com', 'Stacy', 'Noname', 'N'), ('@metoo', 'bad@passwords', 'whostillusesyahoo@yahoo.com', 'Me', 'Too', 'Y'), ('@trollguy', 'itrollforfun', 'trollman@gmail.com', 'TROLL', 'DUDE', 'N');
+
+INSERT INTO tweets (words, quote, likes, rt_of, reply_to, user) VALUES ('if you\'re not first you\'re last', NULL, 2, NULL, NULL, 1), ('THAT\'S NOT TRUE', NULL, 1, NULL, 1, 3), ('hush you\'re not even second', 2, 1000, NULL, NULL, 1);
+
+INSERT INTO connections (follower, followed) VALUES (1, 2), (2, 1), (3, 1), (2, 3);
+
+INSERT INTO blocks (blocker, blocked) VALUES (1, 4), (2, 4), (3, 4);
