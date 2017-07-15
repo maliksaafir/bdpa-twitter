@@ -1,0 +1,35 @@
+html {
+  font-family: Arial;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust:100%;
+ }
+body{
+margin: 10px;
+padding: 10px;
+}
+article,footer,header,div,details,main,nav,summary,hgroup,aside,figcaption,figure{
+  display: block;
+
+}
+audio , canvas, progress, video,{
+  display: inline-block;
+  vertical-align: bottom;
+
+}
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+[hidden],
+template {
+  display: none;
+}
+a{
+  background: transparent;
+}
+h1{
+  font-size: 48px;
+  font-family: Arial;
+  
+}
