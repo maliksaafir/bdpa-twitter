@@ -1,7 +1,8 @@
-<html>
+<!-- <html>
 <head>
+  <link rel="stylesheet" type="text/css" href="styling.css">
 </head>
-<body>
+<body> -->
   <div>
     <a href="#">Home</a>
     <a href="#">Profile</a>
@@ -10,5 +11,5 @@
       <input type="text" placeholder="Search Users">
     </form>
   </div>
-</body>
-</html>
+<!-- </body>
+</html> -->
