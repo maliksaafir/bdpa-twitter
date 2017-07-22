@@ -24,23 +24,6 @@
       <h2>Login:</h2>
       <div class = "form-group">
 
-         <?php
-            $msg = '';
-
-            if (isset($_POST['login']) && !empty($_POST['username'])
-               && !empty($_POST['password'])) {
-
-               if ($_POST['username'] == 'username' &
-                  $_POST['password'] == 'password') {
-                  $_SESSION['valid'] = true;
-                  $_SESSION['timeout'] = time();
-                  echo 'You are now logged in.';
-               }
-               else {
-                  $msg = 'Wrong username or password';
-               }
-            }
-         ?>
       </div>
 
       <div class = "container">
