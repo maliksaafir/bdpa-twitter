@@ -9,7 +9,7 @@
     <a href="#">Profile</a>
     <a href="#">Messages</a>
     <form style="float: right">
-      <input type="text" placeholder="Search Users">
+      <input type="text" placeholder="Search Users" name="search">
     </form>
   </div>
 <!-- </body>
