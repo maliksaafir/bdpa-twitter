@@ -1,3 +1,4 @@
+<?php require_once('connect.php'); ?>
 <!-- <html>
 <head>
   <link rel="stylesheet" type="text/css" href="styling.css">
