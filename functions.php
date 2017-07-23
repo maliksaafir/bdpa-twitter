@@ -76,6 +76,7 @@ SQL;
       AND
         followed = $user2
 SQL;
+
     if ($connection->query($sql)) {
       return 1;
     } else {
@@ -116,6 +117,21 @@ SQL;
     }
 
     if (!block_exists($user1, $user2, $connection)) {
+      return 0;
+    }
+
+    $sql = <<<SQL
+      DELETE FROM
+        blocks
+      WHERE
+        blocker = $user1
+      AND
+        blocked = $user2
+SQL;
+
+    if ($connection->query($sql)) {
+      return 1;
+    } else {
       return 0;
     }
   }
