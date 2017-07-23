@@ -1,6 +1,15 @@
 <?php
    ob_start();
    session_start();
+
+   //Checks to see if password was previously entered incorrectly.
+   if (isset($_SESSION['password_incorrect']) && !$_SESSION['password_incorrect']) {
+     echo "<script>
+            alert('Incorrect password.');
+          </script>";
+   } else {
+
+   }
 ?>
 
 <html lang = "en">
@@ -28,10 +37,8 @@
 
       <div class = "container">
 
-         <form class = "form-signin" role = "form"
-            action = "<?php echo htmlspecialchars($_SERVER['PHP_SELF']);
-            ?>" method = "post">
-            <h4 class = "form-signin-heading"><?php echo $msg; ?></h4>
+         <form class = "form-signin"
+            action = "after_login.php" method = "post">
             <input type = "text" class = "form-control"
                name = "username" placeholder = "username"
                required autofocus></br>
